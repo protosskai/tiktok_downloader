@@ -47,9 +47,23 @@ class FirstFragment : Fragment() {
         binding.parseButton.setOnClickListener {
 //            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
             Thread {
-                val url = binding.urlEditText.text
+                val editText = binding.urlEditText.text
+//                val urlPattern = Regex("video/(.*?)/\\?")
+                val urlPattern = Regex("https://(.*?)/(.*?)/(\\s?)")
+                val url: String? = urlPattern.find(editText.toString())?.value
+                if (url == null) {
+                    activity?.runOnUiThread {
+                        Toast.makeText(
+                            TikTokDownloaderApplication.context,
+                            "你输入的内容有误，请检查！",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    return@Thread
+                }
+                Log.d(TAG, "解析出的url为：$url")
                 val parser: UrlParser = UrlParser()
-                val downloadUrl = parser.parseTruthDownloadURL(url.toString())
+                val downloadUrl = parser.parseTruthDownloadURL(url.trim())
                 Log.d(TAG, downloadUrl)
                 activity?.runOnUiThread {
                     Toast.makeText(
