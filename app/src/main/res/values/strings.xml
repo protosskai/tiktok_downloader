@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">tiktok_downloader</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="download_fragment_label">抖音下载器</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="parse_button">解析并下载</string>
+    <string name="previous">Previous</string>
+
+    <string name="tips">请输入下载链接</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
