@@ -50,7 +50,7 @@ class Downloader {
                         inputStream = response.body().byteStream()
                         val total: Long = response.body().contentLength()
                         fileName = getNameFromUrl(url)
-                        fileOutStream = insertFileIntoDownload(fileName, "")
+                        fileOutStream = insertFileIntoDownload(fileName, "video/mp4")
                         if (fileOutStream == null) {
                             listener.onDownloadFailed()
                             return
