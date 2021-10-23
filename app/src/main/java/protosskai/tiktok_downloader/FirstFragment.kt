@@ -63,7 +63,7 @@ class FirstFragment : Fragment() {
                         activity?.runOnUiThread {
                             Toast.makeText(
                                 TikTokDownloaderApplication.context,
-                                "下载成功！文件路径为：${downloader.fileName}",
+                                "下载成功！请到“下载”文件夹内查看",
                                 Toast.LENGTH_LONG
                             ).show()
                         }
