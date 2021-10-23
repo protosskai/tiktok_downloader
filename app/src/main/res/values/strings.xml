@@ -7,6 +7,6 @@
     <string name="parse_button">解析并下载</string>
     <string name="previous">Previous</string>
 
-    <string name="tips">请输入下载链接</string>
+    <string name="tips">请输入抖音口令或下载链接</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
